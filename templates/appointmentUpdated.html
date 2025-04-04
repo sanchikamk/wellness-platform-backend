@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Updated - Wellness Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #FF9800, #E65100);
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 22px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: center;
+            color: #555;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #FF9800;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Wellness Platform - Appointment Updated
+        </div>
+        <div class="content">
+            <p>Hello <strong>{{name}}</strong>,</p>
+            <p>Your appointment with <strong>{{counselor}}</strong> has been updated.</p>
+            <p><strong>New Date:</strong> {{day}}</p>
+            <p><strong>New Time:</strong> {{from}} - {{to}}</p>
+            <p><strong>Session Type:</strong> {{sessionType}}</p>
+            <p>Please review the changes and feel free to reach out if needed.</p>
+            <a href="{{appointmentLink}}" class="btn">View Updated Appointment</a>
+        </div>
+        <div class="footer">
+            &copy; 2025 Wellness Platform. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
