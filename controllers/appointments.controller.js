@@ -1,7 +1,7 @@
-import Appointment from "../model/appointments.model.js";
+import Appointment from "../models/appointments.model.js";
 import { sendEmail } from "../utils/sendEmail.js";
 import { decodeToken } from "../utils/jwtUtils.js";
-import User from "../model/users.model.js";
+import User from "../models/users.model.js";
 
 // @desc    Create a new appointment
 // @route   POST /api/appointments

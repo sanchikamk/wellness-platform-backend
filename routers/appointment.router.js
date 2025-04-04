@@ -6,7 +6,7 @@ import {
   getAppointmentsByClientId,
   getAppointmentsByCounselorId,
   updateAppointmentNotes
-} from "../controller/appointments.controller.js"; // Rename controller if needed
+} from "../controllers/appointments.controller.js"; // Rename controller if needed
 
 import { checkUserAuth } from "../middleware/auth.middleware.js";
 

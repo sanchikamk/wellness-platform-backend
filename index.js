@@ -2,10 +2,10 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./database/config.js";
 import cors from "cors";
-import userRouter from "./router/users.router.js";
-import councelorRouter from "./router/councelor.router.js";
-import appointmentRouter from "./router/appointment.router.js";
-import paymentRouter from "./router/payment.router.js";
+import userRouter from "./routers/users.router.js";
+import councelorRouter from "./routers/councelor.router.js";
+import appointmentRouter from "./routers/appointment.router.js";
+import paymentRouter from "./routers/payment.router.js";
 
 dotenv.config();
 

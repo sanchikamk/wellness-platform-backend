@@ -1,5 +1,5 @@
 import express from 'express';
-import { createPaymentIntent, handleStripeWebhook } from '../controller/payment.controller.js';
+import { createPaymentIntent, handleStripeWebhook } from '../controllers/payment.controller.js';
 
 const router = express.Router();
 
