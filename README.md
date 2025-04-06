@@ -25,6 +25,7 @@ A web application for clients to book appointments with counselors for mental he
 - JWT for authentication
 - Nodemailer for email notifications
 - Stripe for payment processing
+- Zoom for meetings
 
 ---
 
