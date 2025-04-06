@@ -20,12 +20,16 @@ const appointmentSchema = new mongoose.Schema(
     sessionType: {
       type: String,
       enum: ["mental health", "relationship advice", "career counseling"],
-      required: true,
     },
     status: {
       type: String,
       enum: ["scheduled", "completed", "cancelled"],
       default: "scheduled",
+      required: true,
+    },
+    amount: {
+      type: Number,
+      default: 500,
       required: true,
     },
     notes: {
@@ -43,6 +47,9 @@ const appointmentSchema = new mongoose.Schema(
       enum: ["pending", "paid", "failed"],
       default: "pending",
     },
+    join_url: {
+      type: String,
+    }
   },
   { timestamps: true }
 );

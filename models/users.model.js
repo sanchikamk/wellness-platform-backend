@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema(
     },
     specialization: {
       type: String,
-      enum: ["Mental Health", "Relationship Advice", "Career Counseling"],
+      enum: ["mental health", "relationship advice", "career counseling"],
       required: function () {
         return this.role === "counselor";
       },
@@ -32,6 +32,12 @@ const userSchema = new mongoose.Schema(
       type: Number,
       required: function () {
         return this.role === "counselor";
+      },
+    },
+    amount: {
+      type: Number,
+      default: function () {
+        return this.role === "counselor" ? 500 : undefined;
       },
     },
     availability: {

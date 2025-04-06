@@ -59,7 +59,7 @@ import User from "../models/users.model.js";
 
 export const createAppointment = async (req, res) => {
   try {
-    const { clientId, counselorId, appointmentTimings, sessionType, notes, paymentId, paymentStatus } = req.body;
+    const { clientId, counselorId, appointmentTimings, sessionType, notes, paymentId, paymentStatus, join_url } = req.body;
 
     if (!clientId || !counselorId) {
       return res.status(400).json({ success: false, message: "Client ID and Counselor ID are required" });
@@ -79,6 +79,7 @@ export const createAppointment = async (req, res) => {
       notes,
       paymentId,
       paymentStatus,
+      join_url
     });
 
     const emailTemplateData = {
@@ -86,6 +87,7 @@ export const createAppointment = async (req, res) => {
       from: appointmentTimings.from,
       to: appointmentTimings.to,
       sessionType: counselor.specialization,
+      join_url
     };
 
     const emailsToSend = [
